@@ -3,7 +3,7 @@ require 'pg'
 require 'minitest/autorun'
 require 'json'
 
-DB = PG::Connection.new(dbname: 'dude_test', user: 'dude')
+DB = PG::Connection.new(dbname: 'dude_test', user: 'dude', host: 'db')
 SCHEMA ||= File.read('schema.sql')
 FIXTURES ||= File.read('fixtures.sql')
 
